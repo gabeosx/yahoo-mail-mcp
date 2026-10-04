@@ -1,0 +1,42 @@
+{
+  "name": "yahoo-mail-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A self-hosted Yahoo Mail MCP server with encrypted state and signed new-mail webhooks.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "configure": "node scripts/configure.mjs",
+    "start": "node --env-file=.env src/server.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test",
+    "tunnel": "node --env-file=.env scripts/tunnel.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabeosx/yahoo-mail-mcp.git"
+  },
+  "homepage": "https://github.com/gabeosx/yahoo-mail-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/gabeosx/yahoo-mail-mcp/issues"
+  },
+  "keywords": [
+    "yahoo",
+    "email",
+    "mcp",
+    "imap",
+    "smtp",
+    "webhooks"
+  ],
+  "dependencies": {
+    "imapflow": "2.2.4",
+    "ipaddr.js": "2.5.0",
+    "mailparser": "3.9.34",
+    "nodemailer": "10.0.14",
+    "standardwebhooks": "1.0.0",
+    "zod": "^4.3.6"
+  }
+}
